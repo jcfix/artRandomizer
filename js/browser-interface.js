@@ -16,7 +16,7 @@ $(document).ready(function() {
       var title = response.items[0].title;
       var thumbnail = response.items[0].edmPreview;
 
-      $(".result").append('<img src="'+thumbnail+'" alt="'+title+'">');
+      $(".result").append('<img class="artImage "src="'+thumbnail+'" alt="'+title+'">');
       $(".result").append("Top Search Results: " + title + "!");
       // $(".result").append(response.items[0].europeanaCollectionName);
     });
@@ -26,14 +26,14 @@ $(document).ready(function() {
 
       var image = response.url;
 
-      $(".result").append('<img src="'+image+'" alt="">');
+      $(".result").append('<img class="spaceImage" src="'+image+'" alt="">');
       console.log(response);
     });
-    
+
     $("button#clearResult").click(function() {
     $("div.result").empty();
     $("button#clearResult").hide();
-  });
+    });
   });
 });
 
