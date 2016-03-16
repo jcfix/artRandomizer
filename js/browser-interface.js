@@ -19,7 +19,7 @@ $(document).ready(function() {
 
       $(".result").append('<img class="artImage "src="'+thumbnail+'" alt="'+title+'">');
       $(".result").append("Top Search Results: " + title + "!");
-      // $(".result").append(response.items[0].europeanaCollectionName);
+
     });
 
 
@@ -30,6 +30,7 @@ $(document).ready(function() {
       $(".result").append('<img class="spaceImage" src="'+image+'" alt="">');
       console.log(response);
     });
+    $("form.bookSearch")[0].reset();
 
     $("button#clearResult").click(function() {
     $("div.result").empty();
