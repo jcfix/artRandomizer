@@ -5,6 +5,7 @@ $(document).ready(function() {
   $("button#clearResult").hide();
   $("form.bookSearch").submit(function(event) {
 
+    $('.header').addClass('searchHeader');
     $("button#clearResult").show();
     event.preventDefault();
 
@@ -33,6 +34,7 @@ $(document).ready(function() {
     $("button#clearResult").click(function() {
     $("div.result").empty();
     $("button#clearResult").hide();
+    $('.header').removeClass('searchHeader');
     });
   });
 });
