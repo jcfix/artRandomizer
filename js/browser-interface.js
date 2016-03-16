@@ -17,12 +17,24 @@ $(document).ready(function() {
       var thumbnail = response.items[0].edmPreview;
 
       $(".result").append('<img src="'+thumbnail+'" alt="'+title+'">');
-      $(".result").text("Top Search Results: " + title + "!");
+      $(".result").append("Top Search Results: " + title + "!");
       // $(".result").append(response.items[0].europeanaCollectionName);
     });
-  });
 
-   $("button#clearResult").hide();
+
+    $.get("https://api.nasa.gov/planetary/apod?api_key=FZqzzfC0EjAiSrALPbuOtaKiiVZfQDMqmDcyB85z").then(function(response) {
+
+      var image = response.url;
+
+      $(".result").append('<img src="'+image+'" alt="">');
+      console.log(response);
+    });
+    
+    $("button#clearResult").click(function() {
+    $("div.result").empty();
+    $("button#clearResult").hide();
+  });
+  });
 });
 
 
