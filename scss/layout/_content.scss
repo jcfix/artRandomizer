@@ -30,17 +30,21 @@
     position: absolute;
     width: 100%;
     height: 80vh;
-    bottom: 12%;
+    bottom: 27%;
+    overflow: hidden;
 
     z-index: 1;
     .artItem {
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-height: 30%;
+      align-items: center;
       width: 13vw;
       .artImage {
         width: 100%;
+        border-radius: 50%;
+        opacity: .7;
       }
       .artText {
         margin-top: 2%;
