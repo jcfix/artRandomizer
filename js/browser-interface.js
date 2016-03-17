@@ -1,6 +1,3 @@
-// var DinoText = require('../js/function-name.js').DinoText;
-// var apiKey = require('./../.env').apiKey;
-
 $(document).ready(function() {
 
   $("button#clearResult").hide();
@@ -38,7 +35,6 @@ $(document).ready(function() {
 
     $("div.artContent").on('click', '#addToCollection', function() {
       $(this).parent('div.artItem').addClass('collected');
-      alert("Added!");
     });
 
     $("div.artContent").on('click', '#deleteFromCollection', function() {
@@ -48,13 +44,14 @@ $(document).ready(function() {
     $("form.artSearch")[0].reset();
 
     $("button#clearResult").click(function() {
-    $(".artItem:not(.collected)").remove();
-    $("button#clearResult").hide();
-    $('.header').removeClass('searchHeader');
+      $(".artItem:not(.collected)").remove();
+      $("button#clearResult").hide();
+      $('.header').removeClass('searchHeader');
 
     });
   });
 });
+
 
 
 // /* Front-end User interface (jquery) code goes in this file */

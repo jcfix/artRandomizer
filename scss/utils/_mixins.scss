@@ -18,3 +18,10 @@
     }
   }
 }
+
+@mixin text($size:null, $color:null, $font-weight:null, $l-spacing:null) {
+  font-size: $size;
+  color: $color;
+  font-weight: $font-weight;
+  letter-spacing: $l-spacing;
+}

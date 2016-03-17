@@ -34,6 +34,7 @@ a {
 }
 
 .header h1 {
+  font-size: 60px;
   -webkit-animation: headerColor 3s ease-in-out infinite alternate;
 }
 
@@ -44,7 +45,7 @@ a {
 }
 
 p {
-  font-weight: bolder;
+  @include text($font-weight: bolder);
 }
 
 
