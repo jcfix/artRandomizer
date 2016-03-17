@@ -13,6 +13,7 @@ html, body {
   padding: 0px;
   margin: 0px;
   font-family: 'disco';
+  transition: all 1s ease-in-out;
 }
 
 body::-webkit-scrollbar {
@@ -32,8 +33,8 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  color: green;
+.header h1 {
+  -webkit-animation: headerColor 3s ease-in-out infinite alternate;
 }
 
 .spaceText h3 {
@@ -44,4 +45,33 @@ h1 {
 
 p {
   font-weight: bolder;
+}
+
+
+@-webkit-keyframes headerColor {
+  0% {
+  //  border-radius: 0 0 0 0;
+   color: salmon;
+
+ }
+ 25% {
+  //  border-radius: 50% 0 0 0;
+   color: #99ccff;
+
+ }
+ 50% {
+  //  border-radius: 50% 50% 0 0;
+   color: #99ffe6;
+
+ }
+ 75% {
+  //  border-radius: 50% 50% 50% 0;
+   color: #ffb399;
+
+ }
+ 100% {
+  //  border-radius: 50%;
+   color: #9999ff;
+
+ }
 }
