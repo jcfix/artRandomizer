@@ -12,6 +12,7 @@
 html, body {
   padding: 0px;
   margin: 0px;
+  font-family: 'disco';
 }
 
 body::-webkit-scrollbar {
@@ -33,4 +34,14 @@ a {
 
 h1 {
   color: green;
+}
+
+.spaceText h3 {
+  font-family: 'liberation';
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: bolder;
 }
