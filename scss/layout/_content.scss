@@ -1,5 +1,53 @@
 .result {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  .spaceContent {
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .spaceImage {
+      width: 100vw;
+      opacity: .9;
+    }
+  }
+  .spaceText {
+    width: 85vw;
+    margin: 2%;
+    text-align: center;
+  }
+  .artContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    bottom: 12%;
+
+    z-index: 1;
+    .artItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-height: 30%;
+      width: 13vw;
+      .artImage {
+        width: 100%;
+      }
+      .artText {
+        margin-top: 2%;
+        color: white;
+        z-index: 1;
+        text-align: center;
+      }
+    }
+  }
 }

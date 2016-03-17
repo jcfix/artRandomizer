@@ -1,5 +1,5 @@
 {
-  "name": "bookmap",
+  "name": "artrandomizer",
   "description": "",
   "main": "gulpfile.js",
   "authors": [
@@ -7,7 +7,7 @@
   ],
   "license": "ISC",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/pokojt/artRandomizer",
   "ignore": [
     "**/.*",
     "node_modules",
