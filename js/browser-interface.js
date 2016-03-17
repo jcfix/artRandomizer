@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
 
 
-  $("form.bookSearch").submit(function(event) {
+  $("form.artSearch").submit(function(event) {
     $('.header').addClass('searchHeader');
     $("button#clearResult").show();
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
       var title = response.items[0].title;
       var thumbnail = response.items[0].edmPreview;
 
-      $(".artContent").append('<div class="artItem"><img class="artImage "src="'+thumbnail+'" alt="'+title+'"><p class="artText">Top Search Results: ' + title + '!</p><button id="addToCollection" type="button" name="button">Add to Collection</button></div>');
+      $(".artContent").append('<div class="artItem"><img class="artImage "src="'+thumbnail+'" alt="'+title+'"><p class="artText">Top Search Results: ' + title + '!</p><button id="addToCollection" type="button" name="button">Add to Collection</button><button id="deleteFromCollection" type="button" name="button">Delete From Collection</button></div>');
 
     }).fail(function(error) {
       console.log(error);
@@ -37,14 +37,18 @@ $(document).ready(function() {
     });
 
     $("div.artContent").on('click', '#addToCollection', function() {
-      console.log("clicked!");
       $(this).parent('div.artItem').addClass('collected');
+      alert("Added!");
     });
 
-    $("form.bookSearch")[0].reset();
+    $("div.artContent").on('click', '#deleteFromCollection', function() {
+      $(this).parent('div.artItem').remove();
+    });
+
+    $("form.artSearch")[0].reset();
 
     $("button#clearResult").click(function() {
-    $("div.artContent").empty();
+    $(".artItem:not(.collected)").remove();
     $("button#clearResult").hide();
     $('.header').removeClass('searchHeader');
 

@@ -26,11 +26,11 @@ button {
 }
 
 #addToCollection {
-  border: 1px solid white;
-  padding-top: 2%;
-  width: 60%;
-  font-size: 9px;
-  text-transform: uppercase;
+  @extend %collectionButtons;
+}
+
+#deleteFromCollection {
+  @extend %collectionButtons;
 }
 
 
