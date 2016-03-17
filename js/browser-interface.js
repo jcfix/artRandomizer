@@ -57,8 +57,4 @@ $(document).ready(function() {
 });
 
 
-// $(".result").append('<div class="spaceContent"><img class="spaceImage" src="'+image+'" alt=""><br><p class="spaceText">'+response.explanation+'</p></div>');
-// console.log(response);
-
-
 // /* Front-end User interface (jquery) code goes in this file */
